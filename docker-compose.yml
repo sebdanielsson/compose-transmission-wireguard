@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  wireguard:
+    image: ghcr.io/linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Stockholm
+    ports:
+      - 9091:9091/tcp
+    volumes:
+      - ./config:/config
+      - /lib/modules:/lib/modules
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+  transmission:
+    image: ghcr.io/linuxserver/transmission
+    container_name: transmission
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Stockholm
+      - TRANSMISSION_WEB_HOME=/combustion-release/
+      - USER=<transmission-user>
+      - PASS=<transmission-password>
+    volumes:
+      - ./config:/config
+      - ./downloads:/downloads
+      - ./watch:/watch
+      - ./dark-combustion/main.77f9cffc.css:/combustion-release/main.77f9cffc.css
+    network_mode: "service:wireguard"
+    depends_on: [ "wireguard", ]
+    restart: unless-stopped
