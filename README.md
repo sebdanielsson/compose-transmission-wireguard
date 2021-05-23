@@ -11,7 +11,7 @@ Run Transmission through a WireGuard tunnel using this docker-compose.yml. The T
 **2021-02-22:** First release!
 
 ## WireGuard VPN providers
-Here is a list of WireGuard VPN providers. I've chosen to only list providrs what have a maximum of 2 major converns over at [safetydetectives.com](http://safetydetectives.com/best-vpns/#simple), also these concerns can not be over security. I receive no commission for linking to these providers. Personally I have only tested Mullvad, which are a great provider, so I can't speak for the others. Read about them and make up your own decision.
+Here is a list of WireGuard VPN providers. I've chosen to only list providrs what have a maximum of 2 major concerns over at [safetydetectives.com](http://safetydetectives.com/best-vpns/#simple), these concerns can not be security related. I receive no commission for linking to these providers. Personally I have only tested Mullvad, which are a great provider, so I can't speak for the others. Read about them and make up your own decision.
 
 | Provider                            | No. of major concerns | WireGuard Port Forwarding |
 | ----------------------------------- | --------------------- | ------------------------- |
