@@ -15,11 +15,12 @@ Here is a list of WireGuard VPN providers. I've chosen to only list providrs wha
 
 | Provider                            | No. of major concerns | WireGuard Port Forwarding |
 | ----------------------------------- | --------------------- | ------------------------- |
-| [Mullvad](http://mullvad.net)       | 0                     | ✅                        |
+| [Mullvad](http://mullvad.net)       | 0                     | ✅ [Source](https://mullvad.net/sv/help/port-forwarding-and-mullvad/#addingaport) |
+| [Private Internet Access](https://www.privateinternetaccess.com) | 0 | ✅ [Source](https://www.privateinternetaccess.com/helpdesk/kb/articles/manual-connection-and-port-forwarding-scripts) |
 | [OVPN](http://ovpn.com)             | 1                     | ✅ [Source](https://www.ovpn.com/en/blog/vidarebefordra-portar-i-ovpn) |
-| [WindScribe](http://windscribe.com) | 1                     | ✅ [Only partly](https://windscribe.com/features/port-forwarding) |
+| [WindScribe](http://windscribe.com) | 1                     | ✅ [Only partial](https://windscribe.com/features/port-forwarding) |
 | [IVPN](http://ivpn.net)             | 0                     | ❌ [Source](https://www.ivpn.net/knowledgebase/general/how-do-i-activate-port-forwarding/) |
-| [AzireVPN](http://azirevpn.com)     | 1                     | ❌                        |
+| [AzireVPN](http://azirevpn.com)     | 1                     | ❌ |
 
 ## Usage
 1. `git clone https://github.com/SebDanielsson/compose-transmission-wireguard.git`
