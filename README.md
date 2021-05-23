@@ -10,6 +10,17 @@ Run Transmission through a WireGuard tunnel using this docker-compose.yml. The T
 ## Changelog
 **2021-02-22:** First release!
 
+## WireGuard VPN providers
+Here is a list of WireGuard VPN providers. I've chosen to only list providrs what have a maximum of 2 major converns over at [safetydetectives.com](http://safetydetectives.com/best-vpns/#simple), also these concerns can not be over security. I receive no commission for linking to these providers. Personally I have only tested Mullvad, which are a great provider, so I can't speak for the others. Read about them and make up your own decision.
+
+| Provider                            | No. of major concerns | WireGuard Port Forwarding |
+| ----------------------------------- | --------------------- | ------------------------- |
+| [Mullvad](http://mullvad.net)       | 0                     | ✅                        |
+| [OVPN](http://ovpn.com)             | 1                     | ✅ [Source](https://www.ovpn.com/en/blog/vidarebefordra-portar-i-ovpn) |
+| [WindScribe](http://windscribe.com) | 1                     | ✅ [Only partly](https://windscribe.com/features/port-forwarding) |
+| [IVPN](http://ivpn.net)             | 0                     | ❌ [Source](https://www.ivpn.net/knowledgebase/general/how-do-i-activate-port-forwarding/) |
+| [AzireVPN](http://azirevpn.com)     | 1                     | ❌                        |
+
 ## Usage
 1. `git clone https://github.com/SebDanielsson/compose-transmission-wireguard.git`
 
