@@ -1,5 +1,5 @@
 # compose-transmission-wireguard
-Run Transmission through a WireGuard tunnel using this docker-compose.yml. The Transmission WebUI theme is combustion which is normally a light theme but I've applied my dark variant of this theme. This is optional.
+Run Transmission through a WireGuard tunnel using this compose.yaml. The Transmission WebUI theme is combustion which is normally a light theme but I've applied my dark variant of this theme. This is optional.
 
 [![GitHub](https://img.shields.io/badge/github-blue?style=flat&color=grey&logo=GitHub)](https://github.com/SebDanielsson/compose-transmission-wireguard)
 [![GitHub stars](https://img.shields.io/github/stars/SebDanielsson/compose-transmission-wireguard?style=flat&color=blue&logo=github)](https://github.com/SebDanielsson/compose-transmission-wireguard/stargazers)
@@ -8,7 +8,12 @@ Run Transmission through a WireGuard tunnel using this docker-compose.yml. The T
 [![GitHub license](https://img.shields.io/github/license/SebDanielsson/compose-transmission-wireguard?style=flat&color=blue&logo=github)](https://github.com/SebDanielsson/compose-transmission-wireguard/blob/main/LICENSE)
 
 ## Changelog
-**2021-02-22:** First release!
+**2021-08-17:**
+* Enable IPV6 [#3](https://github.com/SebDanielsson/compose-transmission-wireguard/pull/3)
+* Removed `version` and renamed `docker-compose.yml` to `compose.yaml` according to [The Compose Specification](https://github.com/compose-spec/compose-spec/blob/master/spec.md#compose-file).
+
+**2021-02-22:**
+* First release!
 
 ## WireGuard VPN providers
 Here is a list of WireGuard VPN providers. I've chosen to only list providrs what have a maximum of 2 major concerns over at [safetydetectives.com](http://safetydetectives.com/best-vpns/#simple), these concerns can not be security related. I receive no commission for linking to these providers. Personally I have only tested Mullvad, which are a great provider, so I can't speak for the others. Read about them and make up your own decision.
