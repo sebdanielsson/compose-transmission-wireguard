@@ -12,7 +12,7 @@ services:
     ports:
       - 9091:9091/tcp
     volumes:
-      - ./config:/config
+      - ./wg0.conf:/config/wg0.conf
       - /lib/modules:/lib/modules
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
