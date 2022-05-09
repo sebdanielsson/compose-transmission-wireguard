@@ -1,6 +1,6 @@
 services:
   wireguard:
-    image: linuxserver/wireguard:v1.0.20210914-ls64
+    image: linuxserver/wireguard
     container_name: wireguard
     cap_add:
       - NET_ADMIN
