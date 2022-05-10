@@ -7,6 +7,11 @@ Run Transmission through a WireGuard tunnel using this compose.yaml. The Transmi
 [![GitHub forks](https://img.shields.io/github/forks/SebDanielsson/compose-transmission-wireguard?style=flat&color=blue&logo=github)](https://github.com/SebDanielsson/compose-transmission-wireguard/network)
 [![GitHub license](https://img.shields.io/github/license/SebDanielsson/compose-transmission-wireguard?style=flat&color=blue&logo=github)](https://github.com/SebDanielsson/compose-transmission-wireguard/blob/main/LICENSE)
 
+[![buymeacoffee_img]][buymeacoffee_url]
+
+[buymeacoffee_img]: https://img.shields.io/badge/donate-BuyMeACoffee-ffdd00?logo=buymeacoffee&style=flat
+[buymeacoffee_url]: https://buymeacoffee.com/danielsson
+
 ## Changelog
 **2021-08-17:**
 * Enable IPV6 [#3](https://github.com/SebDanielsson/compose-transmission-wireguard/pull/3)
@@ -32,7 +37,7 @@ Here is a list of WireGuard VPN providers. I've chosen to only list providrs wha
 
 2. Edit `wg0.conf` (WireGuard) and `settings.json` (Transmission) to your liking.
 
-3. `docker-compose up -d` and you should be up and running.
+3. `docker compose up -d` and you should be up and running.
 
 4. The Transmission WebUI is accessible at 127.0.0.1:9091 but I would highly recommend to use a reverse proxy like [Traefik](https://hub.docker.com/_/traefik) or [Nginx](https://hub.docker.com/r/linuxserver/swag) to access the WebUI wherever you are.
 
