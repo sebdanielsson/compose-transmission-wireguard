@@ -1,6 +1,6 @@
 services:
   wireguard:
-    image: linuxserver/wireguard
+    image: linuxserver/wireguard:version-v1.0.20210914
     container_name: wireguard
     cap_add:
       - NET_ADMIN
@@ -19,7 +19,7 @@ services:
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
   transmission:
-    image: ghcr.io/linuxserver/transmission
+    image: ghcr.io/linuxserver/transmission:version-3.00-r5
     container_name: transmission
     environment:
       - PUID=1000
