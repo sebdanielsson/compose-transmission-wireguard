@@ -25,12 +25,12 @@ Here is a list of WireGuard VPN providers. I've chosen to only list providrs wha
 
 | Provider                            | No. of major concerns | WireGuard Port Forwarding |
 | ----------------------------------- | --------------------- | ------------------------- |
-| [Mullvad](http://mullvad.net)       | 0                     | ✅ [Source](https://mullvad.net/sv/help/port-forwarding-and-mullvad/#addingaport) |
+| [Mullvad](https://mullvad.net)       | 0                     | ✅ [Source](https://mullvad.net/sv/help/port-forwarding-and-mullvad/#addingaport) |
 | [Private Internet Access](https://www.privateinternetaccess.com) | 0 | ✅ [Source](https://www.privateinternetaccess.com/helpdesk/kb/articles/manual-connection-and-port-forwarding-scripts) |
-| [OVPN](http://ovpn.com)             | 1                     | ✅ [Source](https://www.ovpn.com/en/blog/vidarebefordra-portar-i-ovpn) |
-| [WindScribe](http://windscribe.com) | 1                     | ✅ [Only partial](https://windscribe.com/features/port-forwarding) |
-| [IVPN](http://ivpn.net)             | 0                     | ❌ [Source](https://www.ivpn.net/knowledgebase/general/how-do-i-activate-port-forwarding/) |
-| [AzireVPN](http://azirevpn.com)     | 1                     | ❌ |
+| [OVPN](https://ovpn.com)             | 1                     | ✅ [Source](https://www.ovpn.com/en/blog/vidarebefordra-portar-i-ovpn) |
+| [IVPN](https://ivpn.net)             | 0                     | ✅ Not available in the US. [Source](https://www.ivpn.net/knowledgebase/general/how-do-i-activate-port-forwarding/) |
+| [AirVPN]([https://azirevpn.com](https://airvpn.org))     | 1                     | ✅ [Source](https://www.reddit.com/r/VPNTorrents/comments/s9f36q/list_of_vpns_that_allow_portforwarding_2022/) |
+| [AzireVPN](https://azirevpn.com)     | 1                     | ✅ [Source](https://www.reddit.com/r/VPNTorrents/comments/s9f36q/list_of_vpns_that_allow_portforwarding_2022/) |
 
 ## Usage
 1. `git clone https://github.com/SebDanielsson/compose-transmission-wireguard.git`
