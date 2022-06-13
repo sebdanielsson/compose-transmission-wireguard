@@ -1,10 +1,11 @@
-/* Version 1.1 */
+/* Version 1.0.1 2022-06-13 */
 
 /*
 Theme colors:
 Dark #242430
 Blueish #414564
 Base #363746
+Light Blueish #9ca0bf
 Light Grey #A9AABC
 Lighter Grey #D4D5DE
 */
@@ -239,7 +240,7 @@ Lighter Grey #D4D5DE
 
 .theme__primary___3tTAW:not([disabled]).theme__flat___1jWAQ,
 .theme__primary___3tTAW:not([disabled]).theme__toggle___hC5Z2 {
-    color: #414564
+    color: #9ca0bf
 }
 
 .theme__primary___3tTAW:not([disabled]).theme__flat___1jWAQ:focus:not(:active),
@@ -1120,7 +1121,7 @@ Lighter Grey #D4D5DE
 }
 
 .theme__text___dXU7C {
-    color: #000;
+    color: #fff;
     display: inline-block;
     font-size: 14px;
     line-height: 18px;
