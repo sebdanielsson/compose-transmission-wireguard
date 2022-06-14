@@ -1,38 +1,36 @@
 services:
   wireguard:
     image: linuxserver/wireguard:version-v1.0.20210914
-    container_name: wireguard
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+      - net.ipv4.conf.all.src_valid_mark=1
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Stockholm
     ports:
-      - 9091:9091/tcp
+      - "9091:9091/tcp"
     volumes:
       - ./wg0.conf:/config/wg0.conf
       - /lib/modules:/lib/modules
-    sysctls:
-      - net.ipv6.conf.all.disable_ipv6=0
-      - net.ipv4.conf.all.src_valid_mark=1
-    restart: unless-stopped
+    restart: always
   transmission:
-    image: ghcr.io/linuxserver/transmission:version-3.00-r5
-    container_name: transmission
+    image: linuxserver/transmission:version-3.00-r5
+    network_mode: "service:wireguard"
+    depends_on:
+      - wireguard
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Stockholm
-      - TRANSMISSION_WEB_HOME=/combustion-release/
-      - USER=<transmission-user>
-      - PASS=<transmission-password>
+      - TRANSMISSION_WEB_HOME=/transmissionic/
+    env_file:
+      - ./transmission.env
     volumes:
-      - ./config:/config
+      - ./transmission-config:/config
       - ./downloads:/downloads
       - ./watch:/watch
-      - ./dark-combustion/main.77f9cffc.css:/combustion-release/main.77f9cffc.css
-    network_mode: "service:wireguard"
-    depends_on: [ "wireguard", ]
-    restart: unless-stopped
+    restart: always
