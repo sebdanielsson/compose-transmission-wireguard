@@ -51,9 +51,10 @@ Here is a list of WireGuard VPN providers. I've chosen to only list providrs wha
 4. `docker compose up -d` and you should be up and running.
 5. The Transmission WebUI is accessible at 127.0.0.1:9091. I highly recommend to use a VPN to access your WebUI remotely.
 
-### Killswitch
+### Extra killswitch
 
-Update `bind-address-ipv4` and `bind-address-ipv6` in Transmission's `settings.json` to the external IP of the VPN server for a built in kill switch.
+Update `bind-address-ipv4` and `bind-address-ipv6` in Transmission's `settings.json` to the IP addresses that you were provided in your 
+`wg0.conf`.
 
 ### Themes
 
