@@ -15,6 +15,10 @@ Run Transmission through a WireGuard tunnel with Docker Compose.
 
 ## Changelog
 
+**2023-02-04:**
+
+* Add example to add a route for local access to the WebUI.
+
 **2022-06-14:**
 
 * Remove default config directory.
@@ -50,6 +54,15 @@ Here is a list of WireGuard VPN providers. I've chosen to only list providrs wha
 3. Edit `transmission.env` and add your preferred username and password to access the WebUI. Also change  peerport to a port that is open at your VPN provider.
 4. `docker compose up -d` and you should be up and running.
 5. The Transmission WebUI is accessible at 127.0.0.1:9091. I highly recommend to use a VPN to access your WebUI remotely.
+
+### Allow local access
+
+If your wg0.conf is configured to route all traffic through the VPN server you'll need to add a route to open up for local access. In the following example, local access from the subnet 192.168.1.0/24 is allowed. Adjust the addresses according to your network. The address 172.100.0.1 is the address of the Docker network bridge.
+
+```ini
+PostUp = ip route add 192.168.1.0/24 via 172.100.0.1;
+PreDown = ip route delete 192.168.1.0/24;
+```
 
 ### Extra killswitch
 
