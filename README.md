@@ -40,12 +40,15 @@ Here is a list of WireGuard VPN providers. I've chosen to only list providrs wha
 
 | Provider                            | No. of major concerns | WireGuard Port Forwarding |
 | ----------------------------------- | --------------------- | ------------------------- |
-| [Mullvad](https://mullvad.net)       | 0                     | ✅ [Source](https://mullvad.net/sv/help/port-forwarding-and-mullvad/#addingaport) |
+| [ProtonVPN](https://protonvpn.com)  | 0                     | ✅ [Source](https://protonvpn.com/support/port-forwarding-manual-setup/) |
 | [Private Internet Access](https://www.privateinternetaccess.com) | 0 | ✅ [Source](https://www.privateinternetaccess.com/helpdesk/kb/articles/manual-connection-and-port-forwarding-scripts) |
 | [OVPN](https://ovpn.com)             | 1                     | ✅ [Source](https://www.ovpn.com/en/blog/vidarebefordra-portar-i-ovpn) |
 | [IVPN](https://ivpn.net)             | 0                     | ✅ Not available in the US. [Source](https://www.ivpn.net/knowledgebase/general/how-do-i-activate-port-forwarding/) |
 | [AirVPN]([https://azirevpn.com](https://airvpn.org))     | 1                     | ✅ [Source](https://www.reddit.com/r/VPNTorrents/comments/s9f36q/list_of_vpns_that_allow_portforwarding_2022/) |
 | [AzireVPN](https://azirevpn.com)     | 1                     | ✅ [Source](https://www.reddit.com/r/VPNTorrents/comments/s9f36q/list_of_vpns_that_allow_portforwarding_2022/) |
+
+**Note:** Some of these provider allow port forwarding by using NAT-PMP. To enable this in a Docker container, use this Docker mod:
+https://github.com/jordanpotter/docker-mods
 
 ## Usage
 
