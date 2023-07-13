@@ -15,6 +15,11 @@ Run Transmission through a WireGuard tunnel with Docker Compose.
 
 ## Changelog
 
+**2023-07-13:**
+
+* Update transmission tag to 4.0.3.
+
+
 **2023-02-04:**
 
 * Add example to add a route for local access to the WebUI.
