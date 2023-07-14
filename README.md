@@ -15,10 +15,19 @@ Run Transmission through a WireGuard tunnel with Docker Compose.
 
 ## Changelog
 
+**2023-07-14:**
+
+* Remove theme environment variable from compose.yaml.
+* Add information to readme about linuxserver no longer bundling 3rd party themes.
+
 **2023-07-13:**
 
 * Update transmission tag to 4.0.3.
 
+**2023-07-08:**
+
+* Remove Mullvad as a provider since they no longer allow port forwarding.
+* Added ProtonVPN as a provider since they now support port forwarding for Wireguard on Linux.
 
 **2023-02-04:**
 
@@ -79,7 +88,17 @@ Update `bind-address-ipv4` and `bind-address-ipv6` in Transmission's `settings.j
 
 ### Themes
 
-Default WebUI theme is [Transmissionic](https://github.com/6c65726f79/Transmissionic) bundled with [linuxserver/docker-transmission](https://github.com/linuxserver/docker-transmission). See their repo for alternatives.
+[linuxserver/docker-transmission](https://github.com/linuxserver/docker-transmission) no longer bundles 3rd party themes. If you want a more powerful UI than the default I'd recommend installing [Transmissionic](https://github.com/6c65726f79/Transmissionic). See the note below from the maintainer:
+
+> ## Changes Required!
+> 
+> This image no longer bundles 3rd party Transmission UI packages.
+> 
+> You will need to either remove the TRANSMISSION_WEB_HOME environment variable
+> from your container or source a UI package yourself and update the path to match.
+> 
+> We would advise you to use subfolders under /config to store your UI packages
+> so that they survive upgrades.
 
 ## Donate
 
