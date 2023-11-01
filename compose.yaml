@@ -14,7 +14,7 @@ services:
     ports:
       - "9091:9091/tcp"
     volumes:
-      - ./wg0.conf:/config/wg0.conf
+      - ./wg0.conf:/config/wg_confs/wg0.conf
       - /lib/modules:/lib/modules
     restart: always
   transmission:
