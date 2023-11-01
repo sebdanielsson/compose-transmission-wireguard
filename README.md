@@ -15,6 +15,11 @@ Run Transmission through a WireGuard tunnel with Docker Compose.
 
 ## Changelog
 
+**2023-11-01:**
+
+* Move wg0.conf to the new directory after linuxserver/transmission breaking change.
+* Update transmission tag to 4.0.4.
+
 **2023-07-14:**
 
 * Remove theme environment variable from compose.yaml.
