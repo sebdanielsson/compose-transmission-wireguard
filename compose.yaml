@@ -18,7 +18,7 @@ services:
       - /lib/modules:/lib/modules
     restart: always
   transmission:
-    image: linuxserver/transmission:4.0.4
+    image: linuxserver/transmission:4.0.5
     network_mode: "service:wireguard"
     depends_on:
       - wireguard
