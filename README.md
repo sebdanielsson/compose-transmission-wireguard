@@ -67,7 +67,7 @@ Here is a list of WireGuard VPN providers. I've chosen to only list providrs wha
 | [AzireVPN](https://azirevpn.com)     | 1                     | ✅ [Source](https://www.reddit.com/r/VPNTorrents/comments/s9f36q/list_of_vpns_that_allow_portforwarding_2022/) |
 
 **Note:** Some of these provider allow port forwarding by using NAT-PMP. To enable this in a Docker container, use this Docker mod:
-https://github.com/jordanpotter/docker-mods
+<https://github.com/jordanpotter/docker-mods>
 
 ## Usage
 
@@ -88,20 +88,20 @@ PreDown = ip route delete 192.168.1.0/24;
 
 ### Extra killswitch
 
-Update `bind-address-ipv4` and `bind-address-ipv6` in Transmission's `settings.json` to the IP addresses that you were provided in your 
+Update `bind-address-ipv4` and `bind-address-ipv6` in Transmission's `settings.json` to the IP addresses that you were provided in your
 `wg0.conf`.
 
 ### Themes
 
 [linuxserver/docker-transmission](https://github.com/linuxserver/docker-transmission) no longer bundles 3rd party themes. If you want a more powerful UI than the default I'd recommend installing [Transmissionic](https://github.com/6c65726f79/Transmissionic). See the note below from the maintainer:
 
-> ## Changes Required!
-> 
+> ## Changes Required
+>
 > This image no longer bundles 3rd party Transmission UI packages.
-> 
+>
 > You will need to either remove the TRANSMISSION_WEB_HOME environment variable
 > from your container or source a UI package yourself and update the path to match.
-> 
+>
 > We would advise you to use subfolders under /config to store your UI packages
 > so that they survive upgrades.
 
