@@ -1,12 +1,15 @@
+---
 services:
   wireguard:
     image: linuxserver/wireguard:version-v1.0.20210914
     cap_add:
       - NET_ADMIN
-      - SYS_MODULE
     sysctls:
       - net.ipv6.conf.all.disable_ipv6=0
       - net.ipv4.conf.all.src_valid_mark=1
+    networks:
+      wgnet:
+        ipv4_address: 172.100.0.2
     environment:
       - PUID=1000
       - PGID=1000
@@ -14,14 +17,22 @@ services:
     ports:
       - "9091:9091/tcp"
     volumes:
-      - ./wg0.conf:/config/wg_confs/wg0.conf
       - /lib/modules:/lib/modules
+      - ./wg0.conf:/config/wg_confs/wg0.conf
+    healthcheck:
+      test: ["CMD-SHELL", "wg show | grep -q handshake"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
     restart: always
   transmission:
     image: linuxserver/transmission:4.0.6
     network_mode: "service:wireguard"
     depends_on:
-      - wireguard
+      wireguard:
+        condition: service_healthy
+        restart: true
     environment:
       - PUID=1000
       - PGID=1000
@@ -33,3 +44,12 @@ services:
       - ./downloads:/downloads
       - ./watch:/watch
     restart: always
+
+networks:
+  wgnet:
+    ipam:
+      config:
+        - subnet: 172.100.0.0/24
+          ip_range: 172.100.0.0/24
+          gateway: 172.100.0.1
+    attachable: true
