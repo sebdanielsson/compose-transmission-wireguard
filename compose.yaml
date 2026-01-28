@@ -27,7 +27,7 @@ services:
       start_period: 10s
     restart: always
   transmission:
-    image: linuxserver/transmission:4.0.6
+    image: linuxserver/transmission:4.1.0
     network_mode: "service:wireguard"
     depends_on:
       wireguard:
