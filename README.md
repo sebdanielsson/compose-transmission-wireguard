@@ -15,6 +15,10 @@ Run Transmission through a WireGuard tunnel with Docker Compose.
 
 ## Changelog
 
+**2026-08-01:**
+
+* Update WireGuard Docker image tag to `version-1.0.20260223-r0`.
+
 **2023-11-01:**
 
 * Move wg0.conf to the new directory after linuxserver/transmission breaking change.
