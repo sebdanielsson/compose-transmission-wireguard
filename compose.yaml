@@ -1,7 +1,7 @@
 ---
 services:
   wireguard:
-    image: linuxserver/wireguard:version-v1.0.20210914
+    image: linuxserver/wireguard:version-1.0.20260223-r0
     cap_add:
       - NET_ADMIN
     sysctls:
