@@ -1,15 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
-  ],
-  "rangeStrategy": "bump",
-  "semanticCommits": "enabled",
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchCurrentVersion": "!/^0/",
-      "automerge": true
-    }
+    "github>sebdanielsson/renovate-config"
   ]
 }
